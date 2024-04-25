@@ -11,7 +11,7 @@
 - app-resources.yaml
 - app-secret-env.yaml
 
-| Name               | Prompt          | Description                                                                                                                                    | Example                |
+| NAME               | PROMPT          | DESCRIPTION                                                                                                                                    | EXAMPLE                |
 |--------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
 | app                | Create yaml file to run Pod with image gcr.io/devops-55250-421307/demo:v2.0.0, with labels app=demo and run=demo. Also, container port set as 8000 and port name as HTTP | Creating a YAML manifest for Kubernetes that runs a simple application on port 8000 | [app.yaml](https://github.com/mykolapryvalov/openai/blob/main/yaml/app.yaml)               |
 | app-volumeMounts   | Create a YAML Pod manifest for Kubernetes with the following specifications: Pod name: app-volume; container based on the image gcr.io/kuar-demo/kuard-amd64:1; Liveness probe HTTP on /healthy:8080 with delay 5s, period 10s, timeout 1s, max. unsuccessful attempts 3; Readiness probe HTTP on /ready:8080, period 2s, delay 0s, max. 3 unsuccessful, 1 successful; open port 8080 with name http ; data volume "data" with hostPath /var/lib/app is mounted in /data | Creating a YAML manifest for Kubernetes that runs a simple application on port 8000, has per-port availability checks, and a data store | [app-volumeMounts](https://github.com/mykolapryvalov/openai/blob/main/yaml/app-volumeMounts.yaml)  |
