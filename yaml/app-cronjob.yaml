@@ -1,3 +1,5 @@
+✨ Attempting to apply the following manifest:
+
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
@@ -9,7 +11,11 @@ spec:
       template:
         spec:
           containers:
-            - name: hello
-              image: bash
-              command: ["echo",  "Hello world"]
+          - name: hello
+            image: bash
+            args:
+            - -c
+            - echo "Hello world"
           restartPolicy: OnFailure
+
+

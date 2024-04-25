@@ -10,7 +10,7 @@ metadata:
 spec:
   containers:
   - name: demo-container
-    image: europe-central2-docker.pkg.dev/wise-coyote-417310/test/burylo_demo:v2.0.0
+    image: gcr.io/devops-55250-421307/demo:v2.0.0
     ports:
     - name: HTTP
       containerPort: 8000
